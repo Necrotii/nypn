@@ -1,3 +1,73 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: green;
+    overflow-x: hidden;
+}
+
+.header {
+    font-family: "Roboto Slab", serif;
+    font-size: 2vw;
+}
+
+.hero {
+    width: 100vw;
+    height: 95vh;
+}
+
+.heroFull {
+    background-image: linear-gradient(rgba(180, 15, 35,.1),rgba(180, 15, 35,.1)), url("../img/heroBG.jpg");
+    background-size: cover;
+    background-position: middle;
+    background-attachment: fixed;
+    background-color: rgb(107, 15, 138);
+}
+
+.heroContent {
+    width: 80vw;
+    height: 500px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#heroHeader {
+    font-family: "Playfair Display", serif;
+    color: white;
+    line-height: 1;
+    font-size: 7.5vw; /* vw = viewport width */
+}
+
+#heroDescriptor {
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+    color: white;
+    font-size: 2.5vw;
+}
+
+.heroArrow {
+    width: 100vw;
+    height: 5vh;
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+}
+
+#arrow {
+    width: 28px;
+    height: 28px;
+}
+
+.about {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+
+.aboutContent {
+    font-family: 
 }
