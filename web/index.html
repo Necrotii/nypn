@@ -22,15 +22,13 @@
             </div>
         </div>
         <div class="heroArrow">
-            <a href="#aboutAnchor"><img src="/src/img/arrow.png" id="arrow"></a>
+            <a href="#about"><img src="/src/img/arrow.png" id="arrow"></a>
         </div>
     </div>
 
     <!-- About -->
-    <div class="section">
+    <div class="section" id="about">
         <div class="grid-x">
-            <div id="aboutAnchor"></div>
-
             <!-- Header -->
             <div class="cell small-2"></div> <!-- Spacer -->
             <div class="cell small-8">
@@ -64,7 +62,7 @@
                     </div>
                     <div class="cell small-4"> <!-- Small images-->
                         <div class="grid-y" style="height: 30vw;">
-                            <div class="cell small-6"><img src="/src/img/flower1.jpg" id="topPic"></div>
+                            <div class="cell small-6"><img src="/src/img/flower1.jpg" class="pics" id="topPic"></div>
                             <div class="cell small-6"><img src="/src/img/flower2.jpg" class="pics" id="bottomPic"></div>
                         </div>
                     </div>
@@ -75,10 +73,8 @@
     </div>
 
     <!-- Mentoring -->
-    <div class="altSection">
+    <div class="altSection" id="mentoring">
         <div class="grid-x">
-            <div id="mentoringAnchor"></div>
-
             <!-- Header -->
             <div class="cell small-2"></div> <!-- Spacer -->
             <div class="cell small-8">
@@ -114,9 +110,8 @@
     </div>
 
     <!-- Events -->
-    <div class="section">
+    <div class="section" id="events">
         <div class="grid-x">
-            <div id="eventsAnchor"></div>
 
             <!-- Header -->
             <div class="cell small-2"></div> <!-- Spacer -->
@@ -150,10 +145,8 @@
     </div>
 
     <!-- Partners -->
-    <div class="altSection">
+    <div class="altSection" id="partners">
         <div class="grid-x">
-            <div id="partnersAnchor"></div>
-
             <!-- Header -->
             <div class="cell small-2"></div> <!-- Spacer -->
             <div class="cell small-8">
@@ -177,10 +170,8 @@
     </div>
 
     <!-- Sponsors -->
-    <div class="section">
+    <div class="section" id="sponsors">
         <div class="grid-x">
-            <div id="partnersAnchor"></div>
-
             <!-- Header -->
             <div class="cell small-2"></div> <!-- Spacer -->
             <div class="cell small-8">
@@ -203,6 +194,69 @@
         </div>
     </div>
     
+    <!-- Contact -->
+    <div class="altSection" id="contact">
+        <div class="grid-x">
+            <!-- Header -->
+            <div class="cell small-2"></div> <!-- Spacer -->
+            <div class="cell small-8">
+                <h2 class="header">Contact</h2>
+            </div>
+            <div class="cell small-2"></div> <!-- Spacer -->
+
+            <!-- Social Buttons-->
+            <div class="cell small-2"></div> <!-- Spacer -->
+            <div class="cell small-8" id="socials">
+                <div>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/NorthlandYoungProfessionalNetwork" target="_blank">
+                        <div class="logoBox" style="background-color: #4D68A0;">
+                            <div class="logoContainer">
+                                <img src="src/img/facebookLogo.png" style="width: 15px;">
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn-->
+                    <a href="https://www.linkedin.com/company/northland-young-professional-network/" target="_blank">
+                        <div class="logoBox" style="background-color: #0077B5;">
+                            <div class="logoContainer">
+                                <img src="src/img/linkedinLogo.png" style="width: 25px;">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+                
+            <div class="cell small-2"></div> <!-- Spacer -->
+
+            <!-- Form -->
+            <div class="cell small-2"></div> <!-- Spacer -->
+            <div class="cell small-8">
+
+                <!--
+                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    ! NEED ACTION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                -->
+
+                <form id="contactForm" action="" method="post">
+                    <label for="name" class="contentText">Name</h2>
+                    <input type="text" id="name" name="name" required class="inputStyle">
+
+                    <label for="email" class="contentText">Email</h2>
+                    <input type="email" id="email" name="email" required class="inputStyle"> 
+
+                    <label for="message" class="contentText">Message</h2>
+                    <textarea form="contactForm" id="message" name="message" required class="inputStyle" style="height: 400px;"></textarea>
+
+                    <input type="submit" id="submitButton">
+                </form>
+
+            </div>
+            <div class="cell small-2"></div> <!-- Spacer -->
+        </div>
+    </div>
     
 
 
