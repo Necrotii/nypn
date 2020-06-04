@@ -12,6 +12,9 @@ body {
     display: none; 
 }
 
+.grid-container {
+    max-width: 82rem;
+}
 .heading {
     font-family: "Roboto Slab", serif;
     font-size: 35px;
@@ -19,7 +22,6 @@ body {
 }
 
 .normal-text {
-    margin: 0;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 20px;
@@ -27,20 +29,21 @@ body {
 }
 
 .image {
-    max-height: 100%;
-    height: 4000px;
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 
 .anchor {
     position: relative;
-    top: -60px;
+    top: -58px;
 }
 
 /* Header */
 
 .header {
     height: 60px;
-    width: 100vw;
+    display: block;
     margin: 0;
     padding: 0;
     position: fixed;
@@ -50,8 +53,8 @@ body {
 
 .header .nav-container {
     height: 60px;
+    display: block;
     width: 100vw;
-    display: inline-block;
     background-color: white;
 }
 
@@ -70,7 +73,7 @@ body {
 .header .nav-container .button-container {
     width: 70vw;
     height: 60px;
-    padding-right: 2vw;
+    padding-right: 10px;
     display: inline-block;
     vertical-align: top;
     text-align: right;
@@ -158,7 +161,7 @@ body {
 /* Sections */
 
 .section {
-    padding: 3vw 0;
+    padding: 2.5rem 0;
 }
 
 .section.white {
@@ -169,19 +172,33 @@ body {
     background-color: #f4f4f4;
 }
 
-.section .image-container {
-    margin: 2vw 0 0 0;
+.section .image-display {
+    height: 35rem;
 }
 
-.section .image-container .image.small-top {
-    padding-bottom: .3vw;
-    padding-left: .6vw;
+.section .image.small-top {
+    padding-bottom: 5px;
+    padding-left: 10px;
 }
 
-.section .image-container .image.small-bottom {
-    padding-top: .3vw;
-    padding-left: .6vw;
+.section .image.small-bottom {
+    padding-top: 5px;
+    padding-left: 10px;
 }
+
+@media only screen and (max-width: 64em) {
+    .section .image.small-top {
+        display: none;
+    }
+    
+    .section .image.small-bottom {
+        display: none;
+    }
+    .section .image-display {
+        height: 100%;
+    }
+}
+
 
 .section .map {
     margin-top: 1vw;
@@ -237,7 +254,7 @@ body {
 .footer
 {
     height: 60px;
-    width: 100vw;
+    display: block;
     padding: 22px;
     background: linear-gradient(0deg, rgba(44, 44, 44,1) 40%, rgb(35, 35, 35) 100%);
 }
@@ -259,6 +276,15 @@ body {
 
 .footer .footer-text.right {
     text-align: right;
+}
+
+/* Mobile Scaling */
+.spacer-column {
+    sbackground-color: purple;
+}
+
+@media only screen and (max-width: 768px) {
+    
 }
 
 /* End */
