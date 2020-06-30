@@ -12,13 +12,6 @@ body {
     display: none; 
 }
 
-.hidden {
-    visibility: hidden;
-    opacity: 0;
-    height: 0px;
-    transition: visibility 0.1s, opacity 0.1s, height 0.1s linear;
-}
-
 .grid-container {
     max-width: 82rem;
 }
@@ -361,6 +354,13 @@ body {
         margin-right: 4vw;
         margin-top: 5px;
     }
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+    transition: visibility 0.1s, opacity 0.1s, height 0.1s linear;
 }
 
 /* End */
