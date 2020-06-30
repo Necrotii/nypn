@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Header -->
-    <div class="header">
+    <div class="header border" id="head">
         <div class="nav-container">
             <div class="logo-container">
                 <a href="#hero"><img src="src/img/site-logo.png" class="logo"></a>
@@ -40,9 +40,33 @@
                     <h2 class="nav-text">Contact</h2>
                 </div></a>
             </div>
+            <a href="javascript:void(0)"><div class="hamburger-container" onclick="showNav()">
+                <img src="src/img/hamburger.png" class="hamburger" id="cheems">
+            </div></a>
         </div>
     </div>
 
+    <div class="mobile-button-container border hidden" id="mbc">
+        <a href="#about"><div class="nav-button" onclick="showNav()">
+            <h2 class="nav-text">About</h2>
+        </div></a>
+        <a href="#mentoring"><div class="nav-button" onclick="showNav()">
+            <h2 class="nav-text">Mentoring</h2>
+        </div></a>
+        <a href="#events"><div class="nav-button" onclick="showNav()">
+            <h2 class="nav-text">Events</h2>
+        </div></a>
+        <a href="#partners"><div class="nav-button" onclick="showNav()">
+            <h2 class="nav-text">Partners</h2>
+        </div></a>
+        <a href="#sponsors"><div class="nav-button" onclick="showNav()">
+            <h2 class="nav-text">Sponsors</h2>
+        </div></a>
+        <a href="#contact"><div class="nav-button" onclick="showNav()">
+            <h2 class="nav-text">Contact</h2>
+        </div></a>
+    </div>
+    
     <!-- Hero -->
     <div class="hero-section" id="hero">
         <div class="hero-container">
@@ -155,14 +179,11 @@
                 </div>
                 
             </div>
-            <div class="grid-x">
                 <!-- Image -->
-                
                 <div class="cell">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.25825699418!2d-94.67774598430884!3d39.19158013715417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f5ae0b2cb1b7%3A0x51669e9d30c6f850!2sPark%20University!5e0!3m2!1sen!2sus!4v1590524228366!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="map"></iframe></div>
                 </div>
                 
-            </div>
         </div>
     </div>
 
@@ -292,13 +313,13 @@
     <!-- Footer -->
     <div class="footer">
         <div class="grid-x">
-            <div class="cell small-6">
-                <h2 class="footer-text left">
+            <div class="cell">
+                <h2 class="footer-text">
                     © 2019-2020 Northland Young Professionals Network
                 </h2>
             </div>
-            <div class="cell small-6">
-                <h2 class="footer-text right">
+            <div class="cell">
+                <h2 class="footer-text">
                     Website by Peter Boyer
                 </h2>
             </div>
