@@ -2,7 +2,15 @@ $(function() {
     $(document).foundation();
 });
 
-function showNav() {
+$('.hamburger-container').on('click', function() {
+    toggleNav();
+});
+
+$('.mobile-button-container .nav-button').on('click', function() {
+    toggleNav();
+});
+
+function toggleNav() {
     //var container = document.getElementsByClassName("mobile-button-container hide");
     var container = document.getElementById("mbc");
     var head = document.getElementById("head")
