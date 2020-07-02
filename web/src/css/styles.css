@@ -56,10 +56,11 @@ body {
     display: block;
     width: 100vw;
     background-color: white;
+    white-space: nowrap;
 }
 
 .header .nav-container .logo-container {
-    width: 49vw;
+    width: 50vw;
     height: 60px;
     display: inline-block;
     vertical-align: top;
@@ -264,6 +265,7 @@ body {
     border: none;
     color: white;
     font-family: "Open Sans", sans-serif;
+
     font-weight: 400;
     font-size: 20px;
     width: 100%;
@@ -273,45 +275,115 @@ body {
 /* Events Calendar */
 
 .event-item {
-    background-color: #bd0068;
+    background-color: #e0007b;
     color: white;
+    max-width: 800px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    font-size: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .event-item a {
     color: white;
 }
 
-.event-item .event-name {
+.event-item .event-name-box {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+    width: auto;
+    height: 75px;
+    overflow:hidden;
+}
 
+.event-item .event-name {
+    height: 65%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    text-align: left;
+    font-family: "Roboto Slab", serif;
+    font-size: 35px;
+    text-transform: capitalize;
 }
 
 .event-item .event-description {
-
+    height: 35%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
 }
 
-.event-item .event-location-box {
-
-}
-
-.event-item .event-location-box .event-location {
-
-}
-
-.event-item .event-location-box .event-directions {
-
+.event-item .event-description::first-letter {
+    text-transform: uppercase;
 }
 
 .event-item .event-date-box {
-
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    width: 135px;
+    height: 75px;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .event-item .event-date-box .event-day {
+    height: 60%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+    font-size: 35px;
 }
 
 .event-item .event-date-box .event-month {
-
+    height: 40%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
 }
+
+.event-item .event-location-box {
+    height: 0px;
+    overflow: hidden;
+    border-top: 0px solid rgba(0, 0, 0, 0.2);
+    transition: height .3s, border-width .3s ease;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.event-item .event-location-box .event-location {
+    font-family: "Open Sans", sans-serif;
+    padding: 10px;
+    font-size: 30px;
+    line-height: 20px;
+}
+
+.event-item:hover .event-location-box {
+    height: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 
 /* Footer */
 
