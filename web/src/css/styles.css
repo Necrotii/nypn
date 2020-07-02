@@ -270,6 +270,49 @@ body {
     height: 40px;
 }
 
+/* Events Calendar */
+
+.event-item {
+    background-color: #bd0068;
+    color: white;
+}
+
+.event-item a {
+    color: white;
+}
+
+.event-item .event-name {
+
+}
+
+.event-item .event-description {
+
+}
+
+.event-item .event-location-box {
+
+}
+
+.event-item .event-location-box .event-location {
+
+}
+
+.event-item .event-location-box .event-directions {
+
+}
+
+.event-item .event-date-box {
+
+}
+
+.event-item .event-date-box .event-day {
+
+}
+
+.event-item .event-date-box .event-month {
+
+}
+
 /* Footer */
 
 .footer
