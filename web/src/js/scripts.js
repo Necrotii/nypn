@@ -111,7 +111,7 @@ function getCalendar(result) {
             item[i].children[0].children[0].innerHTML = parseInt(events[i].start.dateTime.slice(8,10)); // days
 
             monthWord = "September";
-            /*
+            
             switch ((parseInt(events[i].start.dateTime.slice(5,7)))) {
                 case 1:  monthWord = "January"; break;
                 case 2:  monthWord = "February"; break;
@@ -126,7 +126,7 @@ function getCalendar(result) {
                 case 11: monthWord = "November"; break;
                 case 12: monthWord = "December"; break;
             };
-            */
+            
             item[i].children[0].children[1].innerHTML = monthWord // month
 
             // Name Box

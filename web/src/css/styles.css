@@ -275,7 +275,7 @@ body {
 /* Events Calendar */
 
 .event-item {
-    background-color: #e0007b;
+    background-color: rgb(224, 0, 123);
     color: white;
     max-width: 800px;
     margin: 0px;
