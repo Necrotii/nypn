@@ -38,48 +38,33 @@ function getCalendar(result) {
     $.getJSON('https://www.googleapis.com/calendar/v3/calendars/ha8s3llrrqnfuq647apbq2l7dc@group.calendar.google.com/events?key=AIzaSyCe46OoHnkodJ_tcuGGSRgxcoG-CMYlLgY', function(data) {
         // JSON result in `data` variable
         var cal = JSON.parse((JSON.stringify(data)));
-        var limit = cal.items.length
+        var limit = cal.items.length;
 
-        // Add 2 more events for recurring events (so that it actually recurs)
+        var currentDate = new Date();
+
+        // Add 3 more events for recurring events (so that it actually recurs)
         for (i = 0; i < limit; i++) {
             if (cal.items[i].recurrence != undefined) {
-                for (j = 1; j <= 2; j++) { // twice
+                for (j = 1; j <= 3; j++) { // thrice
                     var temp = JSON.parse(JSON.stringify(cal.items[i]));
 
                     var year = parseInt(temp.start.dateTime.slice(0,4));
-                    var month = parseInt(temp.start.dateTime.slice(5,7));
-                    var dayLimit;
+                    var month = parseInt(temp.start.dateTime.slice(5,7) - 1);
                     var day = parseInt(temp.start.dateTime.slice(8,10));
-                    switch (month) {
-                        case 1:  dayLimit = 31; break;
-                        case 2:  dayLimit = 28; break;
-                        case 3:  dayLimit = 31; break;
-                        case 4:  dayLimit = 30; break;
-                        case 5:  dayLimit = 31; break;
-                        case 6:  dayLimit = 30; break;
-                        case 7:  dayLimit = 31; break;
-                        case 8:  dayLimit = 31; break;
-                        case 9:  dayLimit = 30; break;
-                        case 10: dayLimit = 31; break;
-                        case 11: dayLimit = 30; break;
-                        case 12: dayLimit = 31; break;
+
+                    var tempDate = new Date(year, month, day);
+
+                    while (currentDate.getFullYear() > tempDate.getFullYear() || currentDate.getMonth() > tempDate.getMonth() || currentDate.getDate() > tempDate.getDate()) {
+                        tempDate.setDate(tempDate.getDate() + 7);
                     }
 
-                    day += 7 * j;
-                    if (day > dayLimit) {
-                        month++;
-                        day -= dayLimit;
-                    }
-                    if (month > 12) {
-                        year++;
-                        month -= 12;
-                    }
-
-                    year = year.toString();
+                    year = tempDate.getFullYear();
+                    month = tempDate.getMonth() + 1;
                     month = month.toString();
                     if (month.length == 1) {
                         month = "0" + month;
                     }
+                    day = tempDate.getDate();
                     day = day.toString();
                     if (day.length == 1) {
                         day = "0" + day;
@@ -87,6 +72,7 @@ function getCalendar(result) {
                     temp.start.dateTime = temp.start.dateTime.replace(temp.start.dateTime.substr(0,10), (year + "-" + month + "-" + day));
 
                     cal.items.push(JSON.parse(JSON.stringify(temp)));
+                    currentDate.setDate(currentDate.getDate() + 7);
                 }
             }
         }
@@ -99,6 +85,21 @@ function getCalendar(result) {
                 j++;
             }
             events.splice(j,0,JSON.parse(JSON.stringify(cal.items[i])));
+        }
+
+        // Remove events that have already passed
+        currentDate = new Date();
+        for (i = 0; i < events.length; i++) {
+            var year = parseInt(events[i].start.dateTime.slice(0,4));
+            var month = parseInt(events[i].start.dateTime.slice(5,7) - 1);
+            var day = parseInt(events[i].start.dateTime.slice(8,10));
+
+            var tempDate = new Date(year, month, day);
+
+            if (currentDate > tempDate) {
+                events.splice(i, 1);
+                i--;
+            }
         }
 
         // Initialize the event items in HTML
