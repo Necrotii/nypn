@@ -34,7 +34,7 @@ function toggleNav() {
 // Calendar API Key - AIzaSyCe46OoHnkodJ_tcuGGSRgxcoG-CMYlLgY
 // Calendar ID - ha8s3llrrqnfuq647apbq2l7dc@group.calendar.google.com
 
-function getCalendar(result) {
+function initCalendar(result) {
     $.getJSON('https://www.googleapis.com/calendar/v3/calendars/ha8s3llrrqnfuq647apbq2l7dc@group.calendar.google.com/events?key=AIzaSyCe46OoHnkodJ_tcuGGSRgxcoG-CMYlLgY', function(data) {
         // JSON result in `data` variable
         var cal = JSON.parse((JSON.stringify(data)));
@@ -42,10 +42,10 @@ function getCalendar(result) {
 
         var currentDate = new Date();
 
-        // Add 3 more events for recurring events (so that it actually recurs)
+        // Add more events for recurring events (so that it actually recurs)
         for (i = 0; i < limit; i++) {
             if (cal.items[i].recurrence != undefined) {
-                for (j = 1; j <= 3; j++) { // thrice
+                for (j = 1; j <= 4; j++) {
                     var temp = JSON.parse(JSON.stringify(cal.items[i]));
 
                     var year = parseInt(temp.start.dateTime.slice(0,4));
@@ -103,9 +103,6 @@ function getCalendar(result) {
         }
 
         // Initialize the event items in HTML
-
-        //!!  !!  Plan is to have nice square that when hovered shows location part
-
         item = document.getElementsByClassName("event-item");
         for (i = 0; i <= 2; i++) { // for all 3 events
             // Date Box
@@ -138,9 +135,7 @@ function getCalendar(result) {
             item[i].children[2].href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(events[i].location); // a
             item[i].children[2].children[0].children[0].innerHTML = events[i].location;
         }
-
-
     });
 }
 
-getCalendar();
+initCalendar();
