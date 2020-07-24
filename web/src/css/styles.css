@@ -223,9 +223,8 @@ body {
 
 
 .section .map {
-    margin-top: 1vw;
     width: 100%;
-    height: 20vw;
+    height: 300px;
 }
 
 .section .socials-container {
@@ -274,38 +273,77 @@ body {
 
 /* Events Calendar */
 
+.upcoming-events {
+    margin-bottom: 1rem;
+}
+
 .event-item {
-    background-color: rgb(224, 0, 123);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    cursor:pointer;
+    color: black;
     max-width: 800px;
     margin: 0px;
     padding: 0px;
     margin-bottom: 15px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     font-size: 0;
-    /* border: 1px solid rgba(0, 0, 0, 0.2); */
-    /* box-shadow: -6px 0 0 rgb(0, 0, 0); */
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-left: 6px solid black;
 }
 
-.event-item a {
-    color: white;
+.event-item .event-info {
+    width: auto;
+    overflow:hidden;
+    margin: 0;
+    padding: 0;
 }
 
-.event-item .event-name-box {
+.event-item .expand-box {
+    width: 100%;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.event-item .expand-box img  {
+    height: 10px;
+    display: block;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform .2s ease;
+}
+
+.event-item .expand-box img.flipped {
+    transform: rotate(180deg);
+}
+.event-item .event-info a {
+    color: black;
+}
+
+.event-item .event-info .event-name-box {
     font-size: 15px;
     margin: 0;
     padding: 0;
     padding-left: 15px;
-    width: auto;
-    height: 75px;
-    overflow:hidden;
+    max-height: 70px; 
+    transition: max-height .5s ease;
+    transition-delay: 0;
+    overflow: hidden;
 }
 
-.event-item .event-name {
-    height: 65%;
+.event-item .event-info .event-name-box.expanded {
+    max-height: 800px;
+    transition-delay: 0;
+}
+
+.event-item .event-info .event-name {
+    height: 45px;
     width: 100%;
     padding: 0;
     margin: 0;
+    padding-bottom: 5px;
 
     text-align: left;
     font-family: "Roboto Slab", serif;
@@ -313,20 +351,40 @@ body {
     text-transform: capitalize;
 }
 
-.event-item .event-description {
-    height: 35%;
+.event-item .event-info .event-description {
     width: 100%;
     padding: 0;
+    padding-right: 10px;
     margin: 0;
-    
     text-align: left;
     font-family: "Open Sans", sans-serif;
-    font-size: 18px;
-    line-height: 18px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+    line-height: 22px;
 }
 
-.event-item .event-description::first-letter {
+.event-item .event-info .event-description::first-letter {
     text-transform: uppercase;
+}
+
+.event-item .event-info .location-header {
+    font-family: "Roboto Slab", serif;
+    font-size: 25px;
+}
+
+.event-item .event-info .event-location {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.event-item .event-info .directions {
+    font-family: "Open Sans", sans-serif;
+    color:  rgb(6,69,173);
+    text-decoration: underline;
+    font-size: 20px;
+    line-height: 20px;
 }
 
 .event-item .event-date-box {
@@ -334,10 +392,11 @@ body {
     margin: 0;
     padding: 0;
     width: 135px;
-    height: 75px;
+    height: 81px;
     float: right;
     background-color: rgba(0, 0, 0, 0.15);
-    /* border-left: 1px solid rgba(0, 0, 0, 0.2); */
+    border-left: 1px solid rgba(0, 0, 0, .6);
+    border-bottom: 1px solid black;
 }
 
 .event-item .event-date-box .event-day {
@@ -345,7 +404,6 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
-
     text-align: center;
     font-family: "Roboto Slab", serif;
     font-size: 35px;
@@ -362,28 +420,6 @@ body {
     font-size: 18px;
     line-height: 18px;
 }
-
-.event-item .event-location-box {
-    height: 0px;
-    overflow: hidden;
-    /* border-top: 0px solid rgba(0, 0, 0, 0.2); */
-    transition: height .3s, border-width .3s ease;
-    background-color: rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
-}
-
-.event-item .event-location-box .event-location {
-    font-family: "Open Sans", sans-serif;
-    padding: 10px;
-    font-size: 30px;
-    line-height: 20px;
-}
-
-.event-item:hover .event-location-box {
-    height: 50px;
-    /* border-top: 1px solid rgba(0, 0, 0, 0.2); */
-}
-
 
 /* Footer */
 

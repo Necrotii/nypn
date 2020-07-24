@@ -13,6 +13,16 @@ $('.mobile-button-container .nav-button').on('click', function() {
     toggleNav();
 });
 
+$('.event-item').click(function() {
+    if(this.children[1].children[0].className === "event-name-box"){
+        this.children[1].children[0].className = "event-name-box expanded"; //event-name-box
+        this.children[1].children[1].children[0].className = "flipped"; // arrow img
+    } else {
+        this.children[1].children[0].className = "event-name-box"; //event-name-box
+        this.children[1].children[1].children[0].className = ""; // arrow img
+    }
+  });
+
 function toggleNav() {
     //var container = document.getElementsByClassName("mobile-button-container hide");
     var container = document.getElementById("mbc");
@@ -20,11 +30,11 @@ function toggleNav() {
 
     if (container.className === "mobile-button-container border hidden") {
         container.className = "mobile-button-container border";
-        head.className = "header"
+        head.className = "header";
         document.getElementById("cheems").src = "src/img/hamburger_close.png";
     } else {
         container.className = "mobile-button-container border hidden";
-        head.className = "header border"
+        head.className = "header border";
         document.getElementById("cheems").src = "src/img/hamburger.png";
     }
 }
@@ -124,16 +134,17 @@ function initCalendar(result) {
                 case 11: monthWord = "November"; break;
                 case 12: monthWord = "December"; break;
             };
-            
             item[i].children[0].children[1].innerHTML = monthWord // month
+            
 
             // Name Box
-            item[i].children[1].children[0].innerHTML = events[i].summary;
-            item[i].children[1].children[1].innerHTML = events[i].description;
+            item[i].children[1].children[0].children[0].innerHTML = events[i].summary;
+            item[i].children[1].children[0].children[1].innerHTML = events[i].description;
+            item[i].children[1].children[0].children[3].innerHTML = events[i].location;
 
-            // Location Box
-            item[i].children[2].href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(events[i].location); // a
-            item[i].children[2].children[0].children[0].innerHTML = events[i].location;
+            // Location Box - old
+            //item[i].children[2].href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(events[i].location); // a
+            //item[i].children[2].children[0].children[0].innerHTML = events[i].location;
         }
     });
 }
