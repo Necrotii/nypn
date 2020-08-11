@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/src/css/styles.css">
 
     <!-- Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&family=Playfair+Display:wght@700&family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300&family=Playfair+Display:wght@700&family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -24,11 +24,11 @@
                 <a href="#about"><div class="nav-button">
                     <h2 class="nav-text">About</h2>
                 </div></a>
-                <a href="#mentoring"><div class="nav-button">
-                    <h2 class="nav-text">Mentoring</h2>
-                </div></a>
                 <a href="#events"><div class="nav-button">
                     <h2 class="nav-text">Events</h2>
+                </div></a>
+                <a href="#mentoring"><div class="nav-button">
+                    <h2 class="nav-text">Mentoring</h2>
                 </div></a>
                 <a href="#partners"><div class="nav-button">
                     <h2 class="nav-text">Partners</h2>
@@ -120,43 +120,9 @@
         </div>
     </div>
 
-    <!-- Mentoring -->
-    <div class="anchor" id="mentoring"></div>
-    <div class="section off-white">
-        <div class="grid-container">
-            <div class="grid-x">
-                <!-- heading -->
-                <div class="cell">
-                    <h2 class="heading">Mentoring</h2>
-                </div>
-
-                <!-- Text -->
-                <div class="cell">
-                    <p class="normal-text">
-                        We are actively growing our pool of mentors to provide the best fit possible for each and every one of our 
-                        diverse collection of industries. If you are interested in mentoring dedicated young professionals interested 
-                        in learning from your experience, or know of anyone else who is, we would greatly appreciate your involvement!
-                        <br><br>
-                        All we ask of our mentors is that they meet with their mentee a minimum of 2 times. Once to share your wealth of 
-                        knowledge, and once more to see what progress they have made. Still, after that point we encourage both parties to 
-                        continue building their relationship.                    
-                    </p>
-                </div>
-            </div>
-            <div class="grid-x">
-                <!-- Image -->
-                <div class="cell">
-                    <div class="grid-y" style="height: 100%;">
-                        <div class="cell small-12"><img src="/src/img/meeting.jpg" class="image"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Events -->
     <div class="anchor" id="events"></div>
-    <div class="section white">
+    <div class="section off-white">
         <div class="grid-container">
             <div class="grid-x">
                 <!-- Heading -->
@@ -244,6 +210,67 @@
                 <div class="cell">
                     <h2 class="heading">Where we usually meet</h2>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9538.084315675978!2d-94.68280715923733!3d39.189695413956414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f5adb7a9f1c5%3A0x4c9b7210a3931474!2sHerr%20House!5e0!3m2!1sen!2sus!4v1595274382846!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="map"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mentoring -->
+    <div class="anchor" id="mentoring"></div>
+    <div class="section white">
+        <div class="grid-container">
+            <div class="grid-x">
+                <!-- heading -->
+                <div class="cell">
+                    <h2 class="heading">Mentoring</h2>
+                </div>
+
+                <!-- Text and Buttons -->
+                <div class="cell">
+                    <p class="normal-text">
+                        We are actively growing our pool of mentors to provide the best fit possible for each and every one of our 
+                        diverse collection of industries. If you are interested in mentoring dedicated young professionals interested 
+                        in learning from your experience, or know of anyone else who is, we would greatly appreciate your involvement!
+                        <br><br>
+                        All we ask of our mentors is that they meet with their mentee a minimum of 2 times. Once to share your wealth of 
+                        knowledge, and once more to see what progress they have made. Still, after that point we encourage both parties to 
+                        continue building their relationship.                    
+                    </p>
+                    <div class="form-button-container">
+                        <div class="form-button" id="getMentorButton">
+                            <h2 class="form-button-text">Get a mentor</h2>
+                        </div>
+                        <div class="form-button" id="beMentorButton">
+                            <h2 class="form-button-text">Become a mentor</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Get a mentor form -->
+                <div class="expanded-form" id="getMentorForm">
+                    <div class="cell">
+                        <p class="normal-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia minus repellendus accusantium. 
+                        In beatae vero quasi iusto nemo fuga, laborum deleniti nostrum accusantium distinctio dolorem eveniet? Esse nesciunt 
+                        dolor dicta?</p>
+                    </div>
+                </div>
+
+                <!-- Be a mentor form -->
+                <div class="expanded-form" id="beMentorForm">
+                    <div class="cell">
+                        <p class="normal-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia minus repellendus accusantium. 
+                        In beatae vero quasi iusto nemo fuga, laborum deleniti nostrum accusantium distinctio dolorem eveniet? Esse nesciunt 
+                        dolor dicta?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-x">
+                <!-- Image -->
+                <div class="cell">
+                    <div class="grid-y" style="height: 100%;">
+                        <div class="cell small-12"><img src="/src/img/meeting.jpg" class="image"></div>
+                    </div>
                 </div>
             </div>
         </div>

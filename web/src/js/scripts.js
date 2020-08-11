@@ -13,6 +13,8 @@ $('.mobile-button-container .nav-button').on('click', function() {
     toggleNav();
 });
 
+// Events expand
+
 $('.event-item').click(function() {
     if(this.children[1].children[0].className === "event-name-box"){
         this.children[1].children[0].className = "event-name-box expanded"; //event-name-box
@@ -21,7 +23,46 @@ $('.event-item').click(function() {
         this.children[1].children[0].className = "event-name-box"; //event-name-box
         this.children[1].children[1].children[0].className = ""; // arrow img
     }
-  });
+});
+
+// Form expand buttons
+
+var formShown = false;
+var shownForm = null;
+
+$('#getMentorButton').click(function() {
+    if(!formShown){
+        shownForm = "get";
+        formShown = true;
+        $('#getMentorForm').addClass("expanded");
+    }
+    else if(shownForm == "be") {
+        shownForm = "get";
+        $('#beMentorForm').removeClass("expanded");
+        setTimeout(function(){$('#getMentorForm').addClass("expanded"); }, 1000);
+    }
+    else {
+        formShown = false;
+        $('#getMentorForm').removeClass("expanded");
+    }
+});
+
+$('#beMentorButton').click(function() {
+    if(!formShown){
+        formShown = true;
+        shownForm = "be";
+        $('#beMentorForm').addClass("expanded");
+    }
+    else if(shownForm == "get") {
+        shownForm = "be";
+        $('#getMentorForm').removeClass("expanded");
+        setTimeout(function(){$('#beMentorForm').addClass("expanded"); }, 1000);
+    }
+    else {
+        formShown = false;
+        $('#beMentorForm').removeClass("expanded");
+    }
+});
 
 function toggleNav() {
     //var container = document.getElementsByClassName("mobile-button-container hide");
@@ -45,6 +86,7 @@ function toggleNav() {
 // Calendar ID - ha8s3llrrqnfuq647apbq2l7dc@group.calendar.google.com
 
 function initCalendar(result) {
+    
     $.getJSON('https://www.googleapis.com/calendar/v3/calendars/ha8s3llrrqnfuq647apbq2l7dc@group.calendar.google.com/events?key=AIzaSyCe46OoHnkodJ_tcuGGSRgxcoG-CMYlLgY', function(data) {
         // JSON result in `data` variable
         var cal = JSON.parse((JSON.stringify(data)));
