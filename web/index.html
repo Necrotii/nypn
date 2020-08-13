@@ -236,22 +236,97 @@
                         knowledge, and once more to see what progress they have made. Still, after that point we encourage both parties to 
                         continue building their relationship.                    
                     </p>
+                    <div class="anchor" id="mentor-forms"></div>
                     <div class="form-button-container">
-                        <div class="form-button" id="getMentorButton">
-                            <h2 class="form-button-text">Get a mentor</h2>
-                        </div>
-                        <div class="form-button" id="beMentorButton">
-                            <h2 class="form-button-text">Become a mentor</h2>
-                        </div>
+                        <a href="#mentor-forms">
+                            <div class="form-button" id="getMentorButton">
+                                <h2 class="form-button-text">Get a mentor</h2>
+                            </div>
+                        </a>
+                        <a href="#mentor-forms">
+                            <div class="form-button" id="beMentorButton">
+                                <h2 class="form-button-text">Become a mentor</h2>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Get a mentor form -->
+                
                 <div class="expanded-form" id="getMentorForm">
                     <div class="cell">
-                        <p class="normal-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia minus repellendus accusantium. 
-                        In beatae vero quasi iusto nemo fuga, laborum deleniti nostrum accusantium distinctio dolorem eveniet? Esse nesciunt 
-                        dolor dicta?</p>
+                        <h2 class="heading" style="padding-top: 0;">Apply to get a mentor</h2>
+                        <form id="getMentorFormFull" action="" method="post">
+                            <p class="small-text">* = required</p>
+                            <label for="firstname" class="normal-text">First Name *</h2>
+                                <input type="text" id="firstname" name="firstname" required class="input-style"></label>
+
+                            <label for="lastname" class="normal-text">Last Name *</h2>
+                                <input type="text" id="lastname" name="lastname" required class="input-style"></label>
+
+                            <label for="birthdate" class="normal-text">Date of Birth *</h2>
+                                <input type="date" id="birthdate" name="birthdate" required class="input-style"></label>
+
+                            <label for="email" class="normal-text">Email *</h2>
+                                <input type="email" id="email" name="email" required class="input-style"></label>
+
+                            <label for="phone" class="normal-text">Phone Number (xxx-xxx-xxxx)</h2>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="input-style"></label>
+    
+                            <label class="normal-text">Are you willing to commit 3 hours over the next 3 months? *</h2>
+                                <br><input type="radio" name="commithours" required value="yes"/><span>Yes</span>
+                                <br><input type="radio" name="commithours" value="no" /><span>No</span>
+                                <br></label>
+                            
+                            <label class="normal-text">Have you been a mentor or mentee before? *</h2>
+                                <br><input type="radio" name="wasment" required value="yes"><span>Yes</span>
+                                <br><input type="radio" name="wasment" value="no"><span>No</span>
+                                <br></label>
+
+                            <label for="businessname" class="normal-text">Business/School Name</label></h2>
+                                <input type="text" id="businessname" name="businessname" class="input-style"></label>
+
+                            <label for="Occupation" class="normal-text">Occupation *</h2>
+                                <input type="text" id="Occupation" name="Occupation" required class="input-style"></label>
+
+                            <label for="responsibilities" class="normal-text">Current Job Responsibilities</h2>
+                                <input type="text" id="responsibilities" name="responsibilities" required class="input-style"></label>
+
+                            <label for="careerbg" class="normal-text">Description of career background and skills *</h2>
+                                <textarea form="getMentorFormFull" id="careerbg" name="careerbg" required class="input-style medium"></textarea></label>
+
+                            <label for="specialinterests" class="normal-text">Please describe any special interests that may be helpful in matching you and your mentor *</h2>
+                                <textarea form="getMentorFormFull" id="specialinterests" name="specialinterests" required class="input-style medium"></textarea></label>
+
+                            <label for="whywant" class="normal-text">Please briefly explain why you would like a mentor *</h2>
+                                <textarea form="getMentorFormFull" id="whywant" name="whywant" required class="input-style medium"></textarea></label>
+
+                            <label for="mentorindustry" class="normal-text">What industry would you prefer your mentor be an expert in? *</h2>
+                                <input type="text" id="mentorindustry" name="mentorindustry" required class="input-style"></label>
+
+                            <label for="whatget" class="normal-text">What would you like to get out of a mentoring relationship? *</h2>
+                                <textarea form="getMentorFormFull" id="whatget" name="whatget" required class="input-style medium"></textarea></label>
+
+                            <label for="careergoals" class="normal-text">What are your short-term and long-term career goals? *</h2>
+                                <textarea form="getMentorFormFull" id="careergoals" name="careergoals" required class="input-style medium"></textarea></label>
+
+                            <label for="mentorhelp" class="normal-text">How will a mentor facilitate the development of those goals? *</h2>
+                                <textarea form="getMentorFormFull" id="mentorhelp" name="mentorhelp" required class="input-style medium"></textarea></label>
+                            
+                            <label for="training" class="normal-text">Please describe any training or development in which you have participated to support your career trajectory *</h2>
+                                <textarea form="getMentorFormFull" id="training" name="training" required class="input-style medium"></textarea></label>
+
+                            <label for="freetime" class="normal-text">What are some things you do in your free time?</h2>
+                                <textarea form="getMentorFormFull" id="freetime" name="freetime" class="input-style medium"></textarea></label>
+                            
+                            <label for="howhear" class="normal-text">How did you hear about our program?</h2>
+                                <input type="text" id="howhear" name="howhear" class="input-style"></label>
+                            
+                            <label for="extra" class="normal-text">Additional Information or comments</h2>
+                                <textarea form="getMentorFormFull" id="extra" name="extra" class="input-style medium"></textarea></label>
+
+                            <input type="submit" class="submit-button">
+                        </form>
                     </div>
                 </div>
 

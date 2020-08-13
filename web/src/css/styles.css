@@ -40,6 +40,14 @@ body {
     color: #141414;
 }
 
+.small-text {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #141414;
+    margin-bottom: 8px;
+}
+
 .image {
     height: 100%;
     width: 100%;
@@ -48,7 +56,8 @@ body {
 
 .anchor {
     position: relative;
-    top: -58px;
+    top: -90px;
+    width: 100vw;
 }
 
 /* Header */
@@ -72,7 +81,7 @@ body {
 }
 
 .header .nav-container .logo-container {
-    width: 50vw;
+    width: 30vw;
     height: var(--header-height);
     display: inline-block;
     vertical-align: top;
@@ -81,13 +90,13 @@ body {
 .header .logo {
     height: 50px;
     margin-left: 5vw;
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 .header .nav-container .button-container {
-    width: 50vw;
-    height: 60px;
-    padding-right: 25px;
+    width: 70vw;
+    height: var(--header-height);
+    padding-right: 30px;
     display: inline-block;
     vertical-align: top;
     text-align: right;
@@ -99,7 +108,7 @@ body {
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 60px;
+    top: 90px;
     background-color: white;
     z-index: 1;
     transition: visibility 0s linear 0.33s, opacity 0.33s linear;
@@ -111,11 +120,11 @@ body {
 
 .header .nav-container .button-container .nav-button {
     display: inline-block;
-    height: 20px;
-    padding: 0 6px;
+    height: 30px;
+    padding: 0 10px;
     margin: 0;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 60px;
     vertical-align: top;
 }
 
@@ -123,8 +132,8 @@ body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 30px;
     color: #141414;
     transition:color 0.3s;
 }
@@ -268,7 +277,11 @@ body {
 }
 
 .section form .input-style.large {
-    height: 400px;
+    height: 300px;
+}
+
+.section form .input-style.medium {
+    height: 125px;
 }
 
 .section form .submit-button {
@@ -443,8 +456,6 @@ body {
     align-items: center;
 }
 
-
-
 .section .form-button-container > *:not(:last-child) {
     margin-right: 150px;
 }
@@ -482,12 +493,18 @@ body {
 /* Forms */
 .section .expanded-form {
     max-height: 0px;
-    transition: max-height 1s ease;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: max-height 1s, margin-bottom 1s, padding 1s ease;
     overflow: hidden;
+    padding: 0px;
+    width: 100%;
+    margin-bottom: 0px;
 }
 
 .section .expanded-form.expanded {
-    max-height: 64px;
+    max-height: 3650px;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 /* Footer */
@@ -522,8 +539,9 @@ body {
     }
 
     .header .nav-container .hamburger-container {
-        width: 50vw;
-        height: 60px;
+        width: 70vw;
+        height: var(--header-height);
+        padding: 16px;
         display: inline-block;
         vertical-align: top;
         text-align: right;
