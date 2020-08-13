@@ -34,8 +34,11 @@ $('#getMentorButton').click(function() {
     if(!formShown){
         shownForm = "get";
         formShown = true;
-        $('#getMentorForm').addClass("expanded");
+        $('#getMentorForm').removeClass("expanded");
         $('#beMentorForm').removeClass("expanded");
+        $('#getMentorForm').addClass("expanded");
+        setTimeout(function(){$('#beMentorForm').removeClass("expanded"); }, 1000);
+        
     }
     else if(shownForm == "be") {
         shownForm = "get";
@@ -53,8 +56,10 @@ $('#beMentorButton').click(function() {
     if(!formShown){
         formShown = true;
         shownForm = "be";
-        $('#beMentorForm').addClass("expanded");
+        $('#beMentorForm').removeClass("expanded");
         $('#getMentorForm').removeClass("expanded");
+        $('#beMentorForm').addClass("expanded");
+        setTimeout(function(){$('#getMentorForm').removeClass("expanded"); }, 1000);
     }
     else if(shownForm == "get") {
         shownForm = "be";
