@@ -187,6 +187,7 @@ function initCalendar(result) {
             item[i].children[1].children[0].children[0].innerHTML = events[i].summary;
             item[i].children[1].children[0].children[1].innerHTML = events[i].description;
             item[i].children[1].children[0].children[3].innerHTML = events[i].location;
+            item[i].children[1].children[0].children[4].href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(events[i].location);
 
             // Location Box - old
             //item[i].children[2].href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(events[i].location); // a
