@@ -2,7 +2,13 @@
 
 html {
     scroll-behavior: smooth;
-    --secondary-color: #bd0068;
+    --secondary-color: #e2592b;
+    /* 
+       Pink:                #bd0068
+       Logo Lighter Orange: #d75427
+       Logo Darker Orange:  #d14627
+       Good Orange:         #e2592b
+    */
 }
 
 body {
@@ -56,13 +62,13 @@ body {
 
 .anchor {
     position: relative;
-    top: -90px;
+    top: -120px;
     width: 100vw;
 }
 
 /* Header */
 .header {
-    --header-height: 90px;
+    --header-height: 120px;
     height: var(--header-height);
     display: block;
     margin: 0;
@@ -81,20 +87,20 @@ body {
 }
 
 .header .nav-container .logo-container {
-    width: 30vw;
+    width: 35vw;
     height: var(--header-height);
     display: inline-block;
     vertical-align: top;
 }
 
 .header .logo {
-    height: 50px;
-    margin-left: 5vw;
-    margin-top: 20px;
+    height: 110px;
+    margin-left: 6vw;
+    margin-top: 0px;
 }
 
 .header .nav-container .button-container {
-    width: 70vw;
+    width: 65vw;
     height: var(--header-height);
     padding-right: 30px;
     display: inline-block;
@@ -108,7 +114,7 @@ body {
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 90px;
+    top: 120px;
     background-color: white;
     z-index: 1;
     transition: visibility 0s linear 0.33s, opacity 0.33s linear;
@@ -121,10 +127,10 @@ body {
 .header .nav-container .button-container .nav-button {
     display: inline-block;
     height: 30px;
-    padding: 0 10px;
+    padding: 0 12px;
     margin: 0;
-    padding-top: 30px;
-    padding-bottom: 60px;
+    padding-top: 45px;
+    padding-bottom: 75px;
     vertical-align: top;
 }
 
@@ -162,28 +168,42 @@ body {
 }
 
 .hero-section .hero-container .hero-content {
-    width: 80vw;
-    height: 500px;
+    width: 90vw;
+    max-width: 1500px;
+    height: calc(100% - 450px);
     margin: auto;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
 }
 
 .hero-section .hero-container .hero-content .hero-heading {
     font-family: "Playfair Display", serif;
     color: white;
     line-height: 1;
-    font-size: 7.5vw; /* vw = viewport width */
+    font-size: calc(3em + 4vw); /* vw = viewport width */
+    margin-right: 50px;
 }
 
 .hero-section .hero-container .hero-content .hero-descriptor {
     font-family: "Open Sans", sans-serif;
     font-style: italic;
     color: white;
-    font-size: 2.5vw;
+    font-size: calc(1.5em + 1vw);
+    margin-right: 50px;
+}
+
+@media screen and (min-width: 1920px) {
+    .hero-section .hero-container .hero-content .hero-heading {
+        font-size: 8em; /* vw = viewport width */
+    }
+
+    .hero-section .hero-container .hero-content .hero-descriptor {
+        font-size: 3em;
+    }
 }
 
 .hero-section .hero-arrow {
@@ -314,6 +334,7 @@ body {
     font-size: 0;
     border: 1px solid rgba(0, 0, 0, 1);
     border-left: 6px solid black;
+    
 }
 
 .event-item .event-info {
@@ -453,7 +474,14 @@ body {
     display: flex;
     margin: 40px 0;
     justify-content: center;
-    align-items: center;
+}
+
+.section .form-button-container.right {
+    justify-content: flex-end;
+}
+
+.section .form-button-container.left {
+    justify-content: flex-start;
 }
 
 .section .form-button-container > *:not(:last-child) {
@@ -472,6 +500,12 @@ body {
     margin-bottom: 10px;
 }
 
+.section .form-button-container .form-button.small {
+    min-width: 200px;
+    height: 50px;
+    padding: 0px 30px;
+}
+
 .section .form-button-container .form-button .form-button-text {
     font-family: "Open Sans", serif;
     font-weight: 700;
@@ -488,6 +522,13 @@ body {
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
+}
+
+.section .form-button-container .form-button.small .form-button-text {
+    font-size: 24px;
+    line-height: 50px;
+    font-family: "Open Sans", serif;
+    font-weight: 600;
 }
 
 /* Forms */
@@ -539,9 +580,9 @@ body {
     }
 
     .header .nav-container .hamburger-container {
-        width: 70vw;
+        width: 65vw;
         height: var(--header-height);
-        padding: 16px;
+        padding: 30px;
         display: inline-block;
         vertical-align: top;
         text-align: right;
@@ -584,7 +625,7 @@ body {
     }
 
     .mobile-button-container .nav-button:hover .nav-text {
-        color: #bd0068;
+        color: var(--secondary-color);
     }
 
     .header .nav-container .hamburger-container .hamburger {
